@@ -1,0 +1,88 @@
+ [
+    { 
+        
+        "cat":"Maïs"
+         
+        }, 
+    { 
+        
+       
+        "cat":"Soja"
+         
+        },
+        { 
+        
+       
+        "cat":"Riz"
+         
+        },
+        { 
+        
+       
+        "cat":"Ananas"
+         
+        },
+        { 
+        
+       
+        "cat":"Maraichage"
+         
+        }
+        ,
+        { 
+        
+       
+        "cat":"Anacarde"
+         
+        }
+        ,
+        { 
+        
+       
+        "cat":"Cacao"
+         
+        }
+        ,
+        { 
+        
+       
+        "cat":"Hévéa"
+         
+        }
+        ,
+        { 
+        
+       
+        "cat":"Coton"
+         
+        }
+        ,
+        { 
+        
+       
+        "cat":"Manioc"
+         
+        }
+        ,
+        { 
+        
+       
+        "cat":"Igname"
+         
+        }
+        ,
+        
+        { 
+        
+       
+        "cat":"Climat"
+         
+        },
+        { 
+        
+       
+        "cat":"Autres"
+         
+        }
+        
+]
