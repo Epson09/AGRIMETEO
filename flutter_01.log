@@ -1,0 +1,87 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter run
+
+## exception
+
+RPCError: ext.flutter.platformOverride: (-32603) ext.flutter.platformOverride: Unexpected error from chrome devtools:
+text: Uncaught (in promise)
+exception:
+  description: null
+  type: string
+  value: Unexpected null value.
+attempted JS eval: `require("dart_sdk").developer.invokeExtension(
+    "ext.flutter.platformOverride", JSON.stringify({}));
+`
+
+#0      handleErrorIfPresent (package:dwds/src/utilities/shared.dart:97:5)
+#1      ChromeProxyService.callServiceExtension (package:dwds/src/services/chrome_proxy_service.dart:351:5)
+<asynchronous suspension>
+#2      StackZoneSpecification._registerUnaryCallback.<anonymous closure> (package:stack_trace/src/stack_zone_specification.dart:125:47)
+<asynchronous suspension>
+
+
+```
+#0      new _OutstandingRequest (package:vm_service/src/vm_service.dart:1718:45)
+#1      VmService._call (package:vm_service/src/vm_service.dart:2225:21)
+#2      VmService.callServiceExtension (package:vm_service/src/vm_service.dart:2196:14)
+#3      FlutterVmService._checkedCallServiceExtension (package:flutter_tools/src/vmservice.dart:776:28)
+#4      FlutterVmService.invokeFlutterExtensionRpcRaw (package:flutter_tools/src/vmservice.dart:795:49)
+#5      FlutterVmService.flutterPlatformOverride (package:flutter_tools/src/vmservice.dart:734:48)
+#6      ResidentHandlers.debugTogglePlatform (package:flutter_tools/src/resident_runner.dart:848:24)
+<asynchronous suspension>
+#7      TerminalHandler.processTerminalInput (package:flutter_tools/src/resident_runner.dart:1680:7)
+<asynchronous suspension>
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel stable, 2.10.4, on Ubuntu 20.04.4 LTS 5.13.0-37-generic, locale
+    fr_FR.UTF-8)
+    • Flutter version 2.10.4 at /home/epiphane/snap/flutter/common/flutter
+    • Upstream repository https://github.com/flutter/flutter.git
+    • Framework revision c860cba910 (il y a 5 jours), 2022-03-25 00:23:12 -0500
+    • Engine revision 57d3bac3dd
+    • Dart version 2.16.2
+    • DevTools version 2.9.2
+
+[✓] Android toolchain - develop for Android devices (Android SDK version 32.1.0-rc1)
+    • Android SDK at /home/epiphane/Android/Sdk
+    • Platform android-32, build-tools 32.1.0-rc1
+    • Java binary at:
+      /home/epiphane/Documents/android-studio-2020.3.1.24-linux/android-studio/jre/bi
+      n/java
+    • Java version OpenJDK Runtime Environment (build 11.0.11+0-b60-7590822)
+    • All Android licenses accepted.
+
+[✓] Chrome - develop for the web
+    • Chrome at google-chrome
+
+[✓] Android Studio (version 2021.1)
+    • Android Studio at
+      /home/epiphane/Documents/android-studio-2020.3.1.24-linux/android-studio
+    • Flutter plugin version 65.2.2
+    • Dart plugin version 211.7811
+    • Java version OpenJDK Runtime Environment (build 11.0.11+0-b60-7590822)
+
+[✓] VS Code
+    • VS Code at /snap/code/current
+    • Flutter extension version 3.36.0
+
+[✓] Connected device (1 available)
+    • Chrome (web) • chrome • web-javascript • Google Chrome 99.0.4844.84
+
+[!] HTTP Host Availability
+    ✗ HTTP host https://maven.google.com/ is not reachable. Reason: An error occurred
+      while checking the HTTP host: Failed host lookup: 'maven.google.com'
+    ✗ HTTP host https://pub.dev/ is not reachable. Reason: An error occurred while
+      checking the HTTP host: Failed host lookup: 'pub.dev'
+    ✗ HTTP host https://cloud.google.com/ is not reachable. Reason: An error occurred
+      while checking the HTTP host: Failed host lookup: 'cloud.google.com'
+
+! Doctor found issues in 1 category.
+```
