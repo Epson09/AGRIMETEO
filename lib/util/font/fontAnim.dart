@@ -18,16 +18,16 @@ class _FontAnimState extends State<FontAnim> with WidgetsBindingObserver {
   @override
   void initState() {
     widget.numberOfParticles.times(() => particles.add(ParticleModel()));
-    WidgetsBinding.instance.addObserver(this);
+    WidgetsBinding.instance!.addObserver(this);
     super.initState();
   }
 
   @override
   void dispose() {
-    WidgetsBinding.instance.removeObserver(this);
+    WidgetsBinding.instance!.removeObserver(this);
     super.dispose();
   }
-
+  //  keytool -genkey -v -keystore ./agrimeteo.jks -keyalg RSA -keysize 2048 -validity 10000 -alias key0
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) {
     //print("-didChangeAppLifecycleState-" + state.toString());

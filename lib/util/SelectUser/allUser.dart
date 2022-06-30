@@ -59,7 +59,7 @@ class _AllUsersState extends State<AllUsers> with WidgetsBindingObserver {
   @override
   void initState() {
     super.initState();
-    WidgetsBinding.instance.addObserver(this);
+    WidgetsBinding.instance!.addObserver(this);
     getUser();
     fetch();
   }
